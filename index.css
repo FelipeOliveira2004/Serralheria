@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 30px;
+    background-color: black;
+    position: relative;
+
+    & > img {
+        height: 100%;
+    }
+
+    & > nav {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    & ul {
+        display: flex;
+        list-style: none;
+        gap: 10px;
+    }
+
+    & a {
+        text-decoration: none;
+        color: yellow;
+        padding: 5px;
+    }
+}
+
+#banner {
+    background-image: url('image/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+    color: white;
+
+    & > div {
+        width: 394px;
+    }
+
+    & h1 {
+        font-size: 32px;
+        text-transform: uppercase;
+        font-weight: 400;
+        text-shadow: 3px 2px 1px rgba(0, 0, 0, 0.5);
+    }
+
+    & p {
+        margin-block: 14px;
+        text-shadow: 3px 2px 1px rgba(0, 0, 0, 0.5);
+        font-size: 20px;
+    }
+
+    & button {
+        border-radius: 5px;
+        border: none;
+        background-color: #2CB02C;
+        font-size: 24px;
+        padding: 12px 14px;
+        cursor: pointer;
+    }
+}
+
+#sobre {
+    display: flex;
+    align-items: center;
+    padding: 90px 244px;
+    gap: 54px;
+    
+    & > #colecao {
+        display: flex;
+        flex-direction: column;
+
+        & img {
+            width: 258px;
+            height: 258px;
+        }
+    
+        & img:nth-child(2) {
+            margin-left: 168px;
+            margin-top: -90px;
+        }
+    
+        & img:nth-child(3) {
+            margin-top: -90px;
+        }
+    }
+
+    & > p {
+        font-size: 24px;
+        text-align: justify;
+    }
+}
+
+#servicos {
+    background-color: #222;
+
+}
+
+#contato {
+    background-color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
+}
