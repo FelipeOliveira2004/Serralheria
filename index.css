@@ -143,59 +143,81 @@ header {
     }
 }
 
-<<<<<<< HEAD
 #servicos {
-    background-color: #222;
-    height: 1px;
-    width: 1px;
-    position: center;
-
-}
-
-.button-mezanino {
-background-color: transparent;
-border: 2px solid #3498db;
-border-radius: 10px;
-cursor: pointer;
-display: inline-flex;
-align-items: center;
-justify-content: center;
-transition: 0.3s;
-}
-
-.button-mezanino {
-    width: 400px;
-    height: auto;
-    border-radius: 5px;
-}
-
-.button-mezanino:hover{
-    background-color: #3498db;
-}
-
-.button-galpões {
-    background-color: transparent;
-border: 2px solid #3498db;
-border-radius: 10px;
-cursor: pointer;
-display: inline-flex;
-align-items: center;
-justify-content: center;
-transition: 0.3s;
-}
-
-.button-galpões {
+    background-color: rgba(0, 0, 0, 0.95);
+    border: 1px solid black;
     
+    & > h3 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 400;
+        color: #c0b300;
+        margin-block: 20px;
+    }
+
+    & > ul {
+        color: #c0b300;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 34px;
+        margin-bottom: 46px;
+        position: relative;
+
+        & > .ativo::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            bottom: 0;
+            background-color: #c0b300;
+        }
+        
+        & > li {
+            font-size: 20px;
+            padding: 5px;
+            position: relative;
+            cursor: pointer;
+
+            &::before {
+                content: '';
+                position: absolute;
+                height: 1px;
+                width: 0;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #c0b300;
+                transition: all .2s;
+            }
+    
+            &:hover::before {
+                width: 100%;
+            }
+        }
+    }
+
+    & #mezanino {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 84px;
+    
+        & > img {
+            width: 274px;
+            height: 290px;
+        }
+    }
 }
 
+#maps {
+    padding-block: 28px;
 
-
-#contato {
-    background-color: #333;
+    & > iframe {
+        width: 100%;
+    }
 }
 
-=======
->>>>>>> a2a6c7de464c135d8637cd6e5663978fc354bd97
 footer {
     text-align: center;
     padding: 10px;
