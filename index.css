@@ -111,8 +111,49 @@ header {
 
 #servicos {
     background-color: #222;
+    height: 1px;
+    width: 1px;
+    position: center;
 
 }
+
+.button-mezanino {
+background-color: transparent;
+border: 2px solid #3498db;
+border-radius: 10px;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+transition: 0.3s;
+}
+
+.button-mezanino {
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.button-mezanino:hover{
+    background-color: #3498db;
+}
+
+.button-galpões {
+    background-color: transparent;
+border: 2px solid #3498db;
+border-radius: 10px;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+transition: 0.3s;
+}
+
+.button-galpões {
+    
+}
+
+
 
 #contato {
     background-color: #333;
