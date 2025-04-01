@@ -31,11 +31,29 @@ header {
         list-style: none;
         gap: 10px;
     }
-
+    
     & a {
         text-decoration: none;
-        color: yellow;
-        padding: 5px;
+        color: #c0b300;
+        padding: 4px;
+        position: relative;
+        display: inline-block;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #c0b300;
+            transition: all .2s;
+        }
+
+        &:hover::before {
+            width: 100%;
+        }
     }
 }
 
@@ -69,12 +87,19 @@ header {
     }
 
     & button {
+        color: black;
         border-radius: 5px;
         border: none;
-        background-color: #2CB02C;
+        background-color: #c0b300;
         font-size: 24px;
         padding: 12px 14px;
         cursor: pointer;
+        transition: all .2s;
+
+        &:hover {
+            background-color: black;
+            color: #c0b300;
+        }
     }
 }
 
@@ -91,6 +116,8 @@ header {
         & img {
             width: 258px;
             height: 258px;
+            border: 10px solid white;
+            border-radius: 10px;
         }
     
         & img:nth-child(2) {
@@ -103,12 +130,20 @@ header {
         }
     }
 
-    & > p {
+    & h3 {
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 24px;
+        font-weight: 500;
+    }
+
+    & p {
         font-size: 24px;
         text-align: justify;
     }
 }
 
+<<<<<<< HEAD
 #servicos {
     background-color: #222;
     height: 1px;
@@ -159,8 +194,11 @@ transition: 0.3s;
     background-color: #333;
 }
 
+=======
+>>>>>>> a2a6c7de464c135d8637cd6e5663978fc354bd97
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #222;
+    background-color: black;
+    color: white;
 }
