@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+@media screen and (max-width: 1110px) {
+    #colecao {
+        & > img {
+            width: 182px !important;
+            height: 182px !important;
+        }
+
+        & img:nth-child(2) {
+            margin-left: 0 !important;
+        }
+    }
+
+    #quem_somos {
+        & h3 {
+            font-size: 28px !important;
+        }
+    
+        & p {
+            width: 208px !important;
+            font-size: 16px !important;
+        }
+    }
+}

@@ -1,11 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-}
+@import url("geral.css");
 
 header {
     height: 50px;
@@ -106,14 +99,16 @@ header {
 #sobre {
     display: flex;
     align-items: center;
-    padding: 90px 244px;
+    justify-content: center;
+    padding: 90px;
     gap: 54px;
+    border: 1px solid red;
     
     & > #colecao {
         display: flex;
         flex-direction: column;
 
-        & img {
+        & > img {
             width: 258px;
             height: 258px;
             border: 10px solid white;
@@ -140,6 +135,7 @@ header {
     & p {
         font-size: 24px;
         text-align: justify;
+        width: 472px;
     }
 }
 
