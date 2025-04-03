@@ -7,10 +7,25 @@
     font-family: "Inter", sans-serif;
 }
 
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 1080px) {
     #colecao {
         & img:nth-child(2) {
             margin-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 619px) {
+    #sobre {
+        flex-direction: column;
+    }
+
+    #colecao {
+        flex-direction: row;
+        
+        & > img:nth-child(2), & > img:nth-child(3) {
+            margin-top: 0;
+            margin-left: -50px;
         }
     }
 }

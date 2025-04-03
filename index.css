@@ -57,15 +57,16 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 10%;
+    padding-left: clamp(20px, 4vw, 90px);
     color: white;
 
     & > div {
-        width: 394px;
+        width: 100%;
+        max-width: 394px;
     }
 
     & h1 {
-        font-size: 32px;
+        font-size: clamp(20px, 5vw, 32px);
         text-transform: uppercase;
         font-weight: 400;
         text-shadow: 3px 2px 1px rgba(0, 0, 0, 0.5);
@@ -74,7 +75,7 @@ header {
     & p {
         margin-block: 14px;
         text-shadow: 3px 2px 1px rgba(0, 0, 0, 0.5);
-        font-size: 20px;
+        font-size: clamp(16px, 3vw, 20px);
     }
 
     & button {
@@ -98,11 +99,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 90px;
+    padding: 90px 40px;
     gap: 54px;
 
     & h3 {
-        /* font-size: 40px; */
         font-size: clamp(28px, 4vw, 40px);
         text-align: center;
         margin-bottom: 24px;
@@ -110,10 +110,8 @@ header {
     }
 
     & p {
-        /* font-size: 24px; */
         font-size: clamp(16px, 2vw, 24px);
         text-align: justify;
-        /* width: 472px; */
         max-width: 472px;
         width: 100%;
     }
@@ -124,10 +122,8 @@ header {
     flex-direction: column;
 
     & > img {
-        /* width: 258px; */
-        /* height: 258px; */
-        width: clamp(182px, 24vw, 258px);
-        height: clamp(182px, 24vw, 258px);
+        width: clamp(135px, 30vw, 258px);
+        height: clamp(135px, 30vw, 258px);
         border: 10px solid white;
         border-radius: 10px;
     }
@@ -148,7 +144,7 @@ header {
     
     & > h3 {
         text-align: center;
-        font-size: 40px;
+        font-size: clamp(28px, 4vw, 40px);
         font-weight: 400;
         color: #c0b300;
         margin-block: 20px;
@@ -173,7 +169,7 @@ header {
         }
         
         & > li {
-            font-size: 20px;
+            font-size: clamp(16px, 2vw, 20px);
             padding: 5px;
             position: relative;
             cursor: pointer;
@@ -203,8 +199,9 @@ header {
         margin-bottom: 84px;
     
         & > img {
-            width: 274px;
-            height: 290px;
+            width: clamp(100px, 35vw, 274px);
+            aspect-ratio: 1 / 1.06;
+            object-fit: cover;
         }
     }
 }
