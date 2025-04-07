@@ -48,6 +48,19 @@ header {
     }
 }
 
+#menu {
+    display: none;
+    background: none;
+    border: 1px solid #c0b300;
+    border-radius: 3px;
+    cursor: pointer;
+
+    & > ion-icon {
+        color: #c0b300;
+        font-size: 24px;
+    }
+}
+
 #banner {
     background-image: url('image/banner.jpg');
     background-repeat: no-repeat;

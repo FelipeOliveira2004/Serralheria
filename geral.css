@@ -29,3 +29,15 @@
         }
     }
 }
+
+@media screen and (max-width: 520px) {
+    header {
+        & > nav {
+            display: none;
+        }
+    }
+
+    #menu {
+        display: flex;
+    }
+}
