@@ -52,13 +52,17 @@ header {
 
 menu {
     display: none;
-    border: 1px solid red;
     position: fixed;
     top: 50px;
     left: 0;
     list-style: none;
+    background-color: black;
     width: 100%;
     height: calc(100dvh - 50px);
+}
+
+menu.ativo {
+    display: block;
 }
 
 #botaoMenu {

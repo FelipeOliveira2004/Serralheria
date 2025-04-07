@@ -36,11 +36,6 @@
             display: none;
         }
     }
-    
-    menu {
-        /* display: block; */
-        background-color: black;
-    }
 
     #botaoMenu {
         display: flex;
