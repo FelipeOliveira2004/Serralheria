@@ -140,10 +140,11 @@ header {
 
 #servicos {
     background-color: rgba(0, 0, 0, 0.95);
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
     & > h3 {
-        text-align: center;
         font-size: clamp(28px, 4vw, 40px);
         font-weight: 400;
         color: #c0b300;
@@ -153,11 +154,13 @@ header {
     & > ul {
         color: #c0b300;
         display: flex;
-        justify-content: center;
         list-style: none;
-        gap: 34px;
+        gap: 30px;
         margin-bottom: 46px;
         position: relative;
+        white-space: nowrap;
+        overflow: auto;
+        width: 75%;
 
         & > .ativo::before {
             content: '';
