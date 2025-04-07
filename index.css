@@ -5,7 +5,9 @@ header {
     justify-content: space-between;
     padding: 5px 30px;
     background-color: black;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
     & > img {
         height: 100%;
@@ -46,6 +48,17 @@ header {
             width: 100%;
         }
     }
+}
+
+menu {
+    display: none;
+    border: 1px solid red;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    list-style: none;
+    width: 100%;
+    height: calc(100dvh - 50px);
 }
 
 #botaoMenu {
