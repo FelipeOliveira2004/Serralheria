@@ -51,18 +51,36 @@ header {
 }
 
 menu {
-    display: none;
     position: fixed;
     top: 50px;
     left: 0;
     list-style: none;
     background-color: black;
     width: 100%;
-    height: calc(100dvh - 50px);
+    height: 0;
+    overflow: hidden;
+    transition: all .2s;
+    
+    & > a {
+        display: block;
+        padding: 10px 20px;
+
+        &:hover {
+            background-color: #111;
+        }
+    }
+    
+    & li {
+        padding: 5px 20px;
+
+        &:hover {
+            background-color: #111;
+        }
+    }
 }
 
 menu.ativo {
-    display: block;
+    height: calc(100dvh - 50px);
 }
 
 #botaoMenu {
@@ -78,7 +96,7 @@ menu.ativo {
     }
 }
 
-#banner {
+#home {
     background-image: url('image/imagens site/banner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
