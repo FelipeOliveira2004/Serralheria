@@ -265,9 +265,86 @@ menu.ativo {
     }
 }
 
+#contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    
+    & > h3 {
+        font-size: 40px;
+        font-weight: 800;
+    }
+    
+    & > p {
+        font-size: 24px;
+        font-weight: 600;
+        width: 398px;
+        text-align: center;
+        margin-block: 10px 40px;
+    }
+    
+    & > form {
+        width: 758px;
+        
+        & > section {
+            display: flex;
+            gap: 46px;
+        }
+
+        & .dados {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            & > label {
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            & > :where(input, textarea) {
+                padding: 12px 14px;
+                font-size: 20px;
+                border: none;
+                border-radius: 10px;
+                background-color: black;
+                color: #FFE345;
+                resize: none;
+                outline: none;
+                
+                &::placeholder {
+                    color: #FFE345;
+                }
+            }
+
+            & > textarea {
+                height: 174px;
+            }
+        }
+        
+        & > .dados {
+            margin-block: 18px;
+        }
+
+        & > button {
+            display: block;
+            padding: 12px 28px;
+            margin: auto;
+            font-size: 20px;
+            font-weight: 600;
+            color: #FFE345;
+            background-color: black;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
 footer {
     text-align: center;
     padding: 10px;
     background-color: black;
-    color: white;
+    color: #FFE345;
 }
