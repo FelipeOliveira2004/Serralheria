@@ -131,7 +131,7 @@ menu.ativo {
         border-radius: 5px;
         border: none;
         background-color: #c0b300;
-        font-size: 24px;
+        font-size: clamp(16px, 2vw, 24px);
         padding: 12px 14px;
         cursor: pointer;
         transition: all .2s;
@@ -272,20 +272,21 @@ menu.ativo {
     margin-bottom: 80px;
     
     & > h3 {
-        font-size: 40px;
+        font-size: clamp(28px, 4vw, 40px);
         font-weight: 800;
     }
     
     & > p {
-        font-size: 24px;
+        font-size: clamp(16px, 2vw, 24px);
         font-weight: 600;
-        width: 398px;
         text-align: center;
         margin-block: 10px 40px;
     }
     
     & > form {
-        width: 758px;
+        width: 100%;
+        max-width: 758px;
+        padding: 5px;
         
         & > section {
             display: flex;
@@ -299,13 +300,13 @@ menu.ativo {
             gap: 8px;
 
             & > label {
-                font-size: 20px;
+                font-size: clamp(16px, 3vw, 20px);
                 font-weight: 600;
             }
 
             & > :where(input, textarea) {
                 padding: 12px 14px;
-                font-size: 20px;
+                font-size: clamp(16px, 3vw, 20px);
                 border: none;
                 border-radius: 10px;
                 background-color: black;
@@ -331,13 +332,19 @@ menu.ativo {
             display: block;
             padding: 12px 28px;
             margin: auto;
-            font-size: 20px;
+            font-size: clamp(16px, 3vw, 20px);
             font-weight: 600;
             color: #FFE345;
             background-color: black;
             border: none;
             border-radius: 10px;
             cursor: pointer;
+            transition: all .2s;
+
+            &:hover {
+                background-color: #FFE345;
+                color: black;
+            }
         }
     }
 }
@@ -346,10 +353,10 @@ menu.ativo {
     position: relative;
     background-color: #eeeeee;
     display: flex;
-    justify-content: center;
-    gap: 190px;
-    height: 184px;
+    justify-content: space-around;
+    height: clamp(140px, 35vw, 184px);
     width: 90%;
+    max-width: 920px;
     margin: auto;
     margin-bottom: -80px;
     border-radius: 10px;
@@ -360,7 +367,7 @@ menu.ativo {
         flex-direction: column;
         align-items: center;
         gap: 10px;
-        width: 200px;
+        width: 180px;
         margin-top: -44px;
     }
     
@@ -369,23 +376,25 @@ menu.ativo {
         background-color: black;
         display: flex;
         width: fit-content;
-        font-size: 60px;
+        font-size: clamp(40px, 10vw, 60px);;
         border-radius: 50%;
         padding: 14px;
     }
 
     & h3 {
-        font-size: 22px;
+        font-size: clamp(16px, 4vw, 22px);
         font-weight: 700;
     }
 
     & label {
+        font-size: clamp(12px, 3vw, 16px);
         text-align: center;
     }
 }
 
 footer {
     text-align: center;
+    font-size: clamp(12px, 2vw, 16px);
     padding: 10px;
     padding-top: 120px;
     background-color: black;
