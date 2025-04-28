@@ -280,8 +280,12 @@ menu.ativo {
         }
     }
 
-    & #geral, #metalicas, #expositor, #galpoes {
+    & #mezanino, #geral, #metalicas, #expositor, #galpoes {
         display: none;
+    }
+
+    & .galeria.ativo {
+        display: flex !important;
     }
 }
 
