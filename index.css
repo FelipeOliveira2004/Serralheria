@@ -243,17 +243,45 @@ menu.ativo {
         }
     }
 
-    & #mezanino {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
+    & > #fotos {
+        --width: 90%;
         margin-bottom: 84px;
-    
-        & > img {
-            width: clamp(100px, 35vw, 274px);
-            aspect-ratio: 1 / 1.06;
-            object-fit: cover;
+        width: var(--width);
+        height: 180px;
+        overflow: hidden;
+        
+        &:hover .item{
+            animation-play-state: paused;
         }
+    }
+    
+    & .galeria {
+        position: relative;
+        display: flex;
+        margin: auto;
+        height: 100%;
+        width: max(450px, calc(var(--quantidade) * 110px));
+        overflow: hidden;
+    
+        & > .item {
+            position: absolute;
+            width: 180px;
+            height: 100%;
+            left: 100%;
+            flex-shrink: 0;
+            animation: autoRun 15s linear infinite;
+            animation-delay: calc((15s/var(--quantidade)) * (var(--posicao) - 1));
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    & #geral, #metalicas, #expositor, #galpoes {
+        display: none;
     }
 }
 
@@ -399,4 +427,12 @@ footer {
     padding-top: 120px;
     background-color: black;
     color: #FFE345;
+}
+
+@keyframes autoRun {
+    from {
+        left: 100%;
+    } to {
+        left: calc(var(--width) * -1);
+    }
 }
