@@ -11,3 +11,21 @@ menuOpcoes.map(element => {
         menu.classList.remove('ativo');
     })
 })
+
+const servicosOpcoes = [...document.querySelectorAll('#servicos > ul > li')]
+const galeria = [...document.querySelectorAll('#fotos > .galeria')]
+
+servicosOpcoes.map((element, index) => {
+    element.addEventListener('click', () => {
+        servicosOpcoes.forEach(element => {
+            element.classList.remove('ativo');
+        })
+
+        element.classList.add('ativo');
+
+        galeria.forEach(element => {
+            element.classList.remove('ativo');
+        })
+        galeria[index].classList.add('ativo')
+    })
+})
