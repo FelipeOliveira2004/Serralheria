@@ -1,5 +1,5 @@
 header {
-    height: 60px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,7 +23,7 @@ header {
         display: flex;
         list-style: none;
         gap: 10px;
-        font-size: 18px;
+        font-size: 20px;
     }
     
     & a {
